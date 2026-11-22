@@ -125,6 +125,47 @@ main {
     color: var(--light-blue);
 }
 
+/* Pagina inicial */
+
+.grade-pessoas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.cartao-pessoa {
+    flex: 1 1 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 1.5rem 1rem;
+    background: var(--deep-blue);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.cartao-pessoa:hover {
+    border-color: var(--light-blue);
+    transform: translateY(-3px);
+}
+
+.foto-pessoa {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--grey-blue);
+}
+
+.nome-pessoa {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--grey);
+}
+
 /* Curiosidades */
 
 .grade-imagens {
@@ -274,6 +315,10 @@ main {
 
     .cartao-destaque {
         grid-row: auto;
+    }
+
+    .cartao-pessoa {
+        flex: 1 1 140px;
     }
 }
 

@@ -6,7 +6,7 @@ Repositório para o trabalho das páginas pessoais
 https://eduard0vi.github.io/Trabalho-das-paginas-pessoais/index.html
 
 # Componentes do grupo
-Eduardo Toledo Alves de Almeida
-Eduardo Vicente Bisneto
-Thiago Esparrinha Lento Juliano Gaspar
-Ygor Lovato Toledo Silva
+- Eduardo Toledo Alves de Almeida
+- Eduardo Vicente Bisneto
+- Thiago Esparrinha Lento Juliano Gaspar
+- Ygor Lovato Toledo Silva

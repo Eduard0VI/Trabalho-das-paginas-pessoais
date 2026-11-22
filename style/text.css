@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    font-family: 'Lexend Deca', sans-serif;
+    letter-spacing: 0;
+    word-spacing: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--grey);
+    font-weight: 400;
+}
+
+h1,
+h2 {
+    margin: 0;
+}
+
+.titulo-da-parte {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--light-blue);
+}
+
+.titulo-pequeno {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--grey);
+}
+
+a {
+    color: var(--light-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #8ed1ff;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--light-blue);
+    outline-offset: 2px;
+}
+
+b,
+strong {
+    color: var(--grey);
+    font-weight: 600;
+}
+
+p {
+    line-height: 1.6;
+    max-width: 65ch;
+}

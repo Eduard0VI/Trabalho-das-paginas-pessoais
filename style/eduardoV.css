@@ -1,0 +1,279 @@
+
+body {
+    margin: 0;
+    background: var(--dark-blue);
+    min-height: 100vh;
+}
+
+main {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Cabecalho */
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: var(--dark-blue);
+    border-bottom: var(--border);
+}
+
+.nome-principal {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.menu-navegacao {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.menu-navegacao a {
+    font-size: 0.95rem;
+}
+
+/* Seções */
+
+.secao {
+    padding: 3.5rem 0;
+    border-bottom: var(--border);
+}
+
+.secao:last-of-type {
+    border-bottom: none;
+}
+
+.titulo-secao {
+    margin-bottom: 2rem;
+    padding-left: 0.9rem;
+    border-left: 3px solid var(--grey);
+}
+
+.subsecao {
+    margin-bottom: 2.5rem;
+}
+
+.subsecao:last-child {
+    margin-bottom: 0;
+}
+
+.titulo-subsecao {
+    margin-bottom: 1rem;
+}
+
+/* Apresentacao pessoal */
+
+.grade-apresentacao {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 1.25rem;
+}
+
+.cartao {
+    background: var(--deep-blue);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cartao:hover {
+    border-color: var(--light-blue);
+}
+
+.cartao-destaque {
+    grid-row: span 2;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1.25rem;
+}
+
+.imagem-cartao {
+    display: block;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--grey-blue);
+    object-fit: cover;
+}
+
+.cartao-destaque .imagem-cartao {
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 1 / 1;
+}
+
+.cartao:not(.cartao-destaque) .imagem-cartao {
+    width: 72px;
+    height: 72px;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+}
+
+.cartao-destaque .texto-cartao {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--light-blue);
+}
+
+/* Curiosidades */
+
+.grade-imagens {
+    display: grid;
+    gap: 1rem;
+}
+
+.grade-animais {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.grade-animes {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.moldura-imagem {
+    margin: 0;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    border: var(--border);
+    background: var(--deep-blue);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.moldura-imagem:hover {
+    border-color: var(--light-blue);
+    transform: translateY(-3px);
+}
+
+.moldura-imagem img {
+    display: block;
+    width: 100%;
+}
+
+.grade-animais .moldura-imagem img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.grade-animes .moldura-imagem img {
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
+/* Jogos favoritos */
+
+.grade-jogos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+}
+
+.cartao-jogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem;
+    background: var(--deep-blue);
+    border: var(--border);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    transition: border-color 0.2s ease;
+}
+
+.cartao-jogo:hover {
+    border-color: var(--light-blue);
+}
+
+.imagem-jogo {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+}
+
+.nome-jogo {
+    font-size: 1rem;
+}
+
+/* Lugares */
+
+.mensagem-vazia {
+    opacity: 0.7;
+    margin: 0;
+}
+
+.grade-lugares {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.cartao-lugar {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: var(--border);
+    aspect-ratio: 4 / 3;
+}
+
+.imagem-lugar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.nome-lugar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.6rem 0.9rem;
+    background: linear-gradient(to top, rgba(23, 26, 33, 0.92), rgba(23, 26, 33, 0));
+}
+
+.cartao-lugar:hover {
+    border-color: var(--grey);
+}
+
+/* Responsividade */
+
+@media (max-width: 700px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .grade-apresentacao {
+        grid-template-columns: 1fr;
+    }
+
+    .cartao-destaque {
+        grid-row: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .moldura-imagem,
+    .cartao-jogo {
+        transition: none;
+    }
+}
